@@ -12,7 +12,7 @@ jobs:
       name: 'Reusable Workflow Templates'
     
   call_reusable_workflow_job:
-    uses: ZhuoyaLi412/gh-abcs-actions/.github/workflows/super-linter.yml@main
+    uses: ZhuoyaLi412/GitHub-Action-Training/.github/workflows/super-linter.yml@main
 
   call_demo_workflow_job:
     needs: call_greet_everyone_workflow_job
