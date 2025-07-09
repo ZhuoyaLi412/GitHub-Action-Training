@@ -1,6 +1,7 @@
 import requests
 import random
 import sys
+import os
 
 # Make an HTTP GET request to the cat-fact API
 cat_url = "https://www.catfacts.net/api/"
@@ -26,4 +27,5 @@ random_fact = select_random_fact(fact_list)
 print(random_fact)
 
 # Set the fact-output of the action as the value of random_fact
-print(f"fact={random_fact}")
+with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
+   print(f"fact={random_fact}", file=fh)
